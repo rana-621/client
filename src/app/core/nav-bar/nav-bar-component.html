@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand">
+      <img src="assets/logo.png" alt="App Logo">
+      <i class="text-white">E-commerce</i>
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a routerLink="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="" class="nav-link">Shopping</a></li>
+        <li class="nav-item"><a routerLink="" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a routerLink="" class="nav-link">Best Seller</a></li> <!-- Fixed this line -->
+      </ul>
+      
+      <form class="form-inline mx-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="search..." name="" id="">
+          <button class="btn btn-light"><i class="material-icons">Search</i></button>
+        </div>
+      </form>
+
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item"><a href="" class="nav-link">
+          <i class="material-icons">shopping_cart</i>
+        </a></li>
+        <li class="nav-item"><a href="" class="nav-link">
+          <i class="material-icons">account_circle</i>
+        </a></li>
+
+        <div class="dropdown-menu">
+          <a routerLink="" class="dropdown-item">Register<i class="fa fa-user-plus"></i></a>
+          <a routerLink="" class="dropdown-item">Login<i class="fa fa-sign-in"></i></a>
+          <a routerLink="" class="dropdown-item">My order<i class="fa fa-list"></i></a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
