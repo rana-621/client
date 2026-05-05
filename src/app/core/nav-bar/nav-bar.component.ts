@@ -4,8 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-nav-bar',
   standalone: false,
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
 
+  isVisible: boolean = false;
+
+  toggleDropDown(): void {
+    this.isVisible = !this.isVisible;
+  }
 }

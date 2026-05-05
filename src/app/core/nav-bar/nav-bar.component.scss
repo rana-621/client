@@ -1,0 +1,90 @@
+/* =========================
+   Navbar Base
+========================= */
+.navbar {
+  background-color: #1f1f1f;
+  padding: 12px 20px;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 35px;
+      height: 35px;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  /* Links */
+  .navbar-nav .nav-link {
+    color: #ddd;
+    margin: 0 5px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  /* =========================
+     ICONS STYLE
+  ========================= */
+  .icon {
+    font-size: 26px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 8px;
+  }
+
+  .icon:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+  }
+
+  .icon:active {
+    transform: scale(0.95);
+  }
+
+  /* =========================
+     DROPDOWN
+  ========================= */
+  .dropdown-menu {
+    background-color: #2a2a2a;
+    border: none;
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-item {
+    color: #ddd;
+    padding: 10px;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+    }
+  }
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  @media (max-width: 992px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+}
