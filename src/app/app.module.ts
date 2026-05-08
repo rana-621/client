@@ -4,9 +4,9 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { SharedModule } from './shared/shared.module';
 import { provideHttpClient } from '@angular/common/http';
+import { ShopModule } from './shop/shop.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    ShopModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),

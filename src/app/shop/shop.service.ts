@@ -11,7 +11,7 @@ export class ShopService {
 constructor(private http: HttpClient) {}
 
 getProducts() {
-  return this.http.get<IPagination[]>(this.baseURL+"Products/get-all");
+  return this.http.get<IPagination>(this.baseURL+"Products/get-all");
 
 }
 }
