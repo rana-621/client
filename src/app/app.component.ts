@@ -11,21 +11,11 @@ import { IPagination } from './shared/Models/Pagination';
 })
 export class AppComponent implements OnInit {
 
-constructor(private http: HttpClient){}
-baseURL = 'https://localhost:7048/api/Products/get-all'
-Products : IProduct[];
+constructor(){}
 
-getProducts(){
-  return this.http.get(this.baseURL).subscribe({
-    next:((value:IPagination) => {
-      this.Products=value.data
-      console.log(value.data)
-    })
-  })
-}
 
 ngOnInit(): void {
-  this.getProducts()
+
 }
   title = 'client';
   
