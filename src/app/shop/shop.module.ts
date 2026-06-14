@@ -10,7 +10,7 @@ import { ShopItemComponent } from './shop-item/shop-item.component';
     ShopComponent,
     ShopItemComponent
   ],
-  imports: [
+  imports: [ 
     CommonModule
   ],
   exports:[

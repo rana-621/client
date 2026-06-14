@@ -1,5 +1,5 @@
 <div class="container-fluid py-4">
-  <h2 class="main-title">Discover Products</h2>
+  <h2 class="main-title"> Ecommerce </h2>
   <div class="row">
     <!-- Sidebar -->
     <aside class="col-lg-3 mb-4">
@@ -21,7 +21,32 @@
       </div>
     </aside>
 
-    <!-- Products -->
-   
+
+    <section class="col-lg-9">
+      <div class="top-bar">
+        <div class="results-count">
+          Showing <strong>6</strong> Products
+        </div>
+        <div class="input-group search-bar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search products..."
+          >
+          <button class="btn btn-danger">Search</button>
+          <button class="btn btn-dark">Reset</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+      <!-- Dynamic Products from Angular -->
+        <!-- @for(item of products; track $index){  -->
+          <ng-container>
+            <app-shop-item></app-shop-item>
+          </ng-container>
+        
+        </div>
+    
+    </section>
   </div>
 </div>

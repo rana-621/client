@@ -9,6 +9,7 @@ import { IPagination } from '../shared/Models/Pagination';
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss'
 })
+  
 export class ShopComponent implements OnInit {
 
   constructor(private shopService: ShopService) { }
@@ -16,13 +17,17 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     this.getAllProducts()
   }
-product : IProduct[]
-getAllProducts() { 
-    this.shopService.getProducts().subscribe({
-    next: ((value : IPagination)=>{
-      this.product  = value.data
-    })
-    
-  })
+
+products: IProduct[] = [];
+
+getAllProducts() {
+  this.shopService.getProducts().subscribe({
+    next: (value: IPagination) => {
+      this.products = value.data;
+    },
+    error: (err) => {
+      console.error('Error fetching products:', err);
+    }
+  });
 }
 }
