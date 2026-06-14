@@ -1,0 +1,67 @@
+ <section class="col-lg-9">
+      <div class="top-bar">
+        <div class="results-count">
+          Showing <strong>6</strong> Products
+        </div>
+        <div class="input-group search-bar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search products..."
+          >
+          <button class="btn btn-danger">Search</button>
+          <button class="btn btn-dark">Reset</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Product 1 (Static) -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="product-card">
+            <button class="favorite-icon">
+              <i class="fa fa-heart"></i>
+            </button>
+            <img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
+              class="product-image"
+              alt="iPhone"
+            >
+            <div class="product-body">
+              <div class="thumbnails">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=100" alt="">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=101" alt="">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=102" alt="">
+              </div>
+              <h5 class="product-title">iPhone 15 Pro Max</h5>
+              <p class="product-description">
+                Powerful smartphone with advanced camera and A17 processor.
+              </p>
+              <div class="price-section">
+                <span class="old-price">$1200</span>
+                <span class="new-price">$999</span>
+              </div>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+            </div>
+            <div class="product-footer">
+              <button class="btn btn-outline-primary details-btn">Details</button>
+              <button class="btn btn-dark cart-btn">
+                <i class="fa fa-shopping-cart"></i> Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Products from Angular -->
+        <!-- @for(item of product; track $index){ -->
+          <ng-container>
+            <app-shop-item></app-shop-item>
+          </ng-container>
+        <!-- } -->
+      </div>
+    </section>
