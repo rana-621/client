@@ -8,5 +8,6 @@ import { IProduct } from '../../shared/Models/Product';
   styleUrl: './shop-item.component.scss'
 })
 export class ShopItemComponent {
+  
   @Input() product!: IProduct;
 }

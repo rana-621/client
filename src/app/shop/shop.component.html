@@ -40,11 +40,11 @@
 
       <div class="row g-4">
       <!-- Dynamic Products from Angular -->
-        <!-- @for(item of products; track $index){  -->
+        @for(item of products; track $index){ 
           <ng-container>
-            <app-shop-item></app-shop-item>
+            <app-shop-item [product]="item"></app-shop-item>
           </ng-container>
-        
+        }
         </div>
     
     </section>

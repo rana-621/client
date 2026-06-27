@@ -8,21 +8,23 @@
       <img
         src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
         class="product-image"
-        alt="iPhone"
+        alt="{{ product.name }}"
       >
       <div class="product-body">
         <div class="thumbnails">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=100" alt="">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=101" alt="">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=102" alt="">
+          @for(item of product.photos; track $index){ 
+          
+              <img src="{{ item.imageName }}" alt="" class="thumbnail-img small-img">
+           
+          }
         </div>
-        <h5 class="product-title">iPhone 15 Pro Max</h5>
+        <h5 class="product-title">{{ product.name }}</h5>
         <p class="product-description">
-          Powerful smartphone with advanced camera and A17 processor.
+          {{ product.description }}
         </p>
         <div class="price-section">
-          <span class="old-price">$1200</span>
-          <span class="new-price">$999</span>
+          <span class="old-price">${{ product.oldPrice | currency:'USD' }}</span>
+          <span class="new-price">${{ product.newPrice | currency:'USD' }}</span>
         </div>
         <div class="rating">
           <i class="fa fa-star"></i>
